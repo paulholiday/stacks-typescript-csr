@@ -35,7 +35,6 @@
     "history": "^4.10.1",
     "html-webpack-plugin": "4.0.0",
     "identity-obj-proxy": "3.0.0",
-    "jest-environment-jsdom-fourteen": "1.0.1",
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.2",
     "mini-css-extract-plugin": "1.1.0",
@@ -97,7 +96,8 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "eslint-plugin-security": "^1.4.0",
-    "jest": "~25.1.0",
+    "jest": "^27.0.4",
+    "jest-environment-jsdom": "^27.0.3",
     "postcss": "^8.0.9",
     "prettier": "^2.0.2",
     "start-server-and-test": "^1.11.0",
@@ -138,13 +138,14 @@
       "react-app-polyfill/jsdom"
     ],
     "setupFilesAfterEnv": [
+      "@testing-library/jest-dom",
       "<rootDir>/src/setupTests.ts"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
       "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
     ],
-    "testEnvironment": "jest-environment-jsdom-fourteen",
+    "testEnvironment": "jsdom",
     "transform": {
       "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
